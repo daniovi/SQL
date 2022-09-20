@@ -1,0 +1,28 @@
+--Create a bookstore database
+
+CREATE TABLE bookstore (id INTEGER PRIMARY KEY, genre TEXT, quantity INTEGER, price REAL, aisle INTEGER); 
+
+INSERT INTO bookstore VALUES ( 1, "Fantasy", 300, 24.99, 4);
+INSERT INTO bookstore VALUES (2, "Science Fiction", 200, 19.99, 5);
+INSERT INTO bookstore VALUES (3, "Dystopian", 250, 24.99, 5);
+INSERT INTO bookstore VALUES ( 4, "Adventure", 270, 24.99, 4);
+INSERT INTO bookstore VALUES (5, "Romance", 300, 19.99, 6);
+INSERT INTO bookstore VALUES (6, "Mystery", 100, 14.99, 7);
+INSERT INTO bookstore VALUES (7, "Horror", 100, 17.99, 7);
+INSERT INTO bookstore VALUES (8, "Thriller", 50, 17.99, 7);
+INSERT INTO bookstore VALUES (9, "LGBTQ+", 100, 14.99, 8);
+INSERT INTO bookstore VALUES (10, "Historical Fiction", 70, 14.99,9);
+INSERT INTO bookstore VALUES (11, "Young Adult", 150, 19.99, 6);
+INSERT INTO bookstore VALUES (12, "Childrens Fiction", 80, 9.99, 9);
+INSERT INTO bookstore VALUES(13, "Short Stoy Collections", 90, 9.99, 8);
+INSERT INTO bookstore VALUES (14, "Business & Finance", 60, 14.99, 10);
+INSERT INTO bookstore VALUES (15, "Biography & Memoirs", 60, 9.99, 10);
+
+--Exhibit the store database ordered by price
+SELECT * FROM bookstore ORDER BY price; 
+
+--What is the sum of books that we have in store?
+SELECT SUM (quantity) FROM bookstore;
+
+--What is the highest price in the bookstore?
+SELECT MAX (price) FROM bookstore;  
